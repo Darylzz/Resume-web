@@ -1,0 +1,24 @@
+<div class="app-menu p-3">
+  <div class="flex align-items-center gap-2">
+    <span class="app-menu-title">Ingkarat Resume</span>
+    <img
+      class="app-menu-logo"
+      src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/84_Dev-512.png"
+      alt=""
+    />
+  </div>
+  <div class="flex gap-2">
+    <p-button
+      class="home-button"
+      label="Home"
+      [rounded]="true"
+      (onClick)="onClickNavigateToHome()"
+    ></p-button>
+    <p-button
+      class="about-button"
+      label="About me"
+      [rounded]="true"
+      (onClick)="onClickNavigateToAbout()"
+    ></p-button>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.app-menu {
+  background-color: #2471a3;
+  height: 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .app-menu-title {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 22px;
+    cursor: default;
+  }
+  .app-menu-logo {
+    width: 5%;
+  }
+  ::ng-deep {
+    .home-button {
+      .p-button {
+        font-size: 16px;
+      }
+    }
+    .about-button {
+      .p-button {
+        font-size: 16px;
+      }
+    }
+  }
+}
