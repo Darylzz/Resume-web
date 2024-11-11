@@ -20,7 +20,11 @@ export class AppMenuComponent {
     this.currentWidth = width;
   }
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+    if (typeof window !== 'undefined') {
+      this.currentWidth = window.innerWidth;
+    }
+  }
 
   onClickNavigateToHome() {
     this.router.navigate(['home']);

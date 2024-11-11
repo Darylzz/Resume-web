@@ -1,8 +1,59 @@
-<div class="home-container flex justify-content-between lg:align-items-center">
-  <div class="flex flex-column p-3 lg:pl-6">
+<div class="home-container flex justify-content-between">
+  <div class="w-6 flex flex-column p-3 justify-content-center lg:pl-6">
     <span class="content-text-title">Hey there!</span>
     <span class="content-text mt-5">I'm Ingkarat Boonruang</span>
     <span class="content-text mt-2">Software developer</span>
+    <div class="mt-3">
+      <p-button
+        class="contact-me-button"
+        [ngClass]="
+          currentWidth > mediaSize.md
+            ? 'contact-me-button'
+            : 'contact-me-button-mobile'
+        "
+        [rounded]="true"
+        label="Contact me"
+        (onClick)="onClickNavigateToContact()"
+      ></p-button>
+    </div>
   </div>
-  <div class="content-picture"></div>
+  <div class="w-6 content-skill p-3 flex flex-column justify-content-center">
+    <span class="text-my-skill">My skill:</span>
+    <div class="mt-3">
+      <span>Javascript</span>
+      <p-progressBar [value]="80" />
+    </div>
+    <div class="mt-3">
+      <span>TypeScript</span>
+      <p-progressBar [value]="80" />
+    </div>
+    <div class="mt-3">
+      <span>Angular</span>
+      <p-progressBar [value]="70" />
+    </div>
+    <div class="mt-3">
+      <span>React</span>
+      <p-progressBar [value]="70" />
+    </div>
+    <div class="mt-3">
+      <span>C# (Practice)</span>
+      <p-progressBar [value]="30" />
+    </div>
+    <div class="mt-3">
+      <span>DOTNET (Practice)</span>
+      <p-progressBar [value]="30" />
+    </div>
+    <div class="mt-3">
+      <span>NodeJS (Express)</span>
+      <p-progressBar [value]="60" />
+    </div>
+    <div class="mt-3">
+      <span>MySQL</span>
+      <p-progressBar [value]="60" />
+    </div>
+    <div class="mt-3">
+      <span>Oracle</span>
+      <p-progressBar [value]="40" />
+    </div>
+  </div>
 </div>
