@@ -1,4 +1,4 @@
-<div class="app-menu p-3">
+<div class="app-menu p-2 lg:p-3">
   <div class="flex align-items-center gap-2">
     <span class="app-menu-title">IB</span>
     <img
@@ -7,18 +7,34 @@
       alt=""
     />
   </div>
-  <div class="flex gap-2">
+  <div class="flex gap-2 align-items-center">
     <p-button
       class="home-button"
+      [ngClass]="
+        currentWidth > mediaSize.md ? 'home-button' : 'home-button-mobile'
+      "
       label="Home"
       [rounded]="true"
       (onClick)="onClickNavigateToHome()"
     ></p-button>
     <p-button
       class="about-button"
+      [ngClass]="
+        currentWidth > mediaSize.md ? 'about-button' : 'about-button-mobile'
+      "
       label="About me"
       [rounded]="true"
       (onClick)="onClickNavigateToAbout()"
+    ></p-button>
+    <p-button
+      class="contact-me-button"
+      [ngClass]="
+        currentWidth > mediaSize.md
+          ? 'contact-me-button'
+          : 'contact-me-button-mobile'
+      "
+      label="Contact me"
+      [rounded]="true"
     ></p-button>
   </div>
 </div>

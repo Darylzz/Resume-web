@@ -16,7 +16,7 @@
     cursor: default;
   }
   .app-menu-logo {
-    width: 5%;
+    width: 10%;
   }
   ::ng-deep {
     .home-button {
@@ -24,9 +24,32 @@
         font-size: 16px;
       }
     }
+    .home-button-mobile {
+      .p-button {
+        font-size: 8px;
+        padding: 8px;
+      }
+    }
     .about-button {
       .p-button {
         font-size: 16px;
+      }
+    }
+    .about-button-mobile {
+      .p-button {
+        font-size: 8px;
+        padding: 8px;
+      }
+    }
+    .contact-me-button {
+      .p-button {
+        font-size: 16px;
+      }
+    }
+    .contact-me-button-mobile {
+      .p-button {
+        font-size: 8px;
+        padding: 8px;
       }
     }
   }
