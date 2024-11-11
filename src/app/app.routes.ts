@@ -9,7 +9,11 @@ export const routes: Routes = [
     path: 'about',
     loadChildren: () =>
       import('./about-me/about-me.module').then((m) => m.AboutMeModule),
-    pathMatch: 'prefix',
+  },
+  {
+    path: 'contact-me',
+    loadChildren: () =>
+      import('./contact-me/contact-me.module').then((m) => m.ContactMeModule),
   },
   {
     pathMatch: 'full',
