@@ -2,7 +2,24 @@
   height: 100%;
   width: 100%;
   .name {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
+  }
+  .portfolio {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  ::ng-deep {
+    .i-love-my-wife-button {
+      .p-button {
+        font-size: 16px;
+      }
+    }
+    .i-love-my-wife-button-mobile {
+      .p-button {
+        font-size: 8px;
+        padding: 8px;
+      }
+    }
   }
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { MediaSize } from '../constant/responsive';
 
 @Component({
   selector: 'app-about-me',
@@ -12,8 +13,19 @@ export class AboutMeComponent implements OnInit {
   experienceInYears: string;
   CurrentDayOfWork: number = new Date().getTime();
   firstDayOfWork: number = new Date('2023-05-01').getTime();
+  currentWidth: number;
+  mediaSize = MediaSize;
 
-  constructor() {}
+  @HostListener('window:resize', ['$event.target.innerWidth'])
+  onResize(width: number) {
+    this.currentWidth = width;
+  }
+
+  constructor() {
+    if (typeof window !== 'undefined') {
+      this.currentWidth = window.innerWidth;
+    }
+  }
 
   ngOnInit(): void {
     const summaryExperience = this.CurrentDayOfWork - this.firstDayOfWork;
@@ -24,5 +36,9 @@ export class AboutMeComponent implements OnInit {
     this.experienceInYears = `${years.split('.')[0]}.${
       months.split('.')[0]
     } years`;
+  }
+
+  onClickLinkIloveMyWife() {
+    window.open('https://i-love-my-wife-3000.netlify.app/', '_blank');
   }
 }

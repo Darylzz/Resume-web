@@ -20,4 +20,21 @@
       efficiently</span
     >
   </div>
+  <hr />
+  <div class="mt-3">
+    <span class="portfolio">My Portfolio</span>
+    <div class="flex flex-column mt-3">
+      <p-button
+        class="i-love-my-wife-button"
+        [ngClass]="
+          currentWidth > mediaSize.md
+            ? 'i-love-my-wife-button'
+            : 'i-love-my-wife-button-mobile'
+        "
+        (onClick)="onClickLinkIloveMyWife()"
+        [rounded]="true"
+        label="i love my wife 3000"
+      ></p-button>
+    </div>
+  </div>
 </div>
