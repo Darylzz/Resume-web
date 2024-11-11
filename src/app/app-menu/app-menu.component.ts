@@ -29,4 +29,8 @@ export class AppMenuComponent {
   onClickNavigateToAbout() {
     this.router.navigate(['about']);
   }
+
+  onClickNavigateToContact() {
+    this.router.navigate(['contact-me']);
+  }
 }
