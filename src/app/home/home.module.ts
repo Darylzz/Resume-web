@@ -7,7 +7,7 @@ import { HomeComponent } from './home.component';
 const component = [HomeComponent];
 
 @NgModule({
-  declarations: [],
+  declarations: [...component],
   imports: [CommonModule, HomeRoutingModule],
 })
 export class HomeModule {}
