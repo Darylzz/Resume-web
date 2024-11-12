@@ -7,7 +7,10 @@
       alt=""
     />
   </div>
-  <div class="flex gap-2 align-items-center">
+  <div
+    class="flex gap-2 align-items-center"
+    *ngIf="currentWidth > mediaSize.sm; else mobileTemplate"
+  >
     <p-button
       class="home-button"
       [ngClass]="
@@ -38,4 +41,14 @@
       (onClick)="onClickNavigateToContact()"
     ></p-button>
   </div>
+  <ng-template #mobileTemplate>
+    <div class="card flex justify-content-center">
+      <p-menu #menuHeader [model]="items" [popup]="true"></p-menu>
+      <p-button
+        class="hamburger-button"
+        (onClick)="menuHeader.toggle($event)"
+        icon="pi pi-align-justify"
+      />
+    </div>
+  </ng-template>
 </div>
