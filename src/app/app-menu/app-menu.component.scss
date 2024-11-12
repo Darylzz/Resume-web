@@ -22,6 +22,9 @@
     .home-button {
       .p-button {
         font-size: 16px;
+        .p-button-label {
+          text-wrap: nowrap;
+        }
       }
     }
     .home-button-mobile {
@@ -33,6 +36,9 @@
     .about-button {
       .p-button {
         font-size: 16px;
+        .p-button-label {
+          text-wrap: nowrap;
+        }
       }
     }
     .about-button-mobile {
@@ -44,12 +50,22 @@
     .contact-me-button {
       .p-button {
         font-size: 16px;
+        .p-button-label {
+          text-wrap: nowrap;
+        }
       }
     }
     .contact-me-button-mobile {
       .p-button {
         font-size: 8px;
         padding: 8px;
+      }
+    }
+    .hamburger-button {
+      .p-button.p-button-icon-only {
+        /* width: 3rem; */
+        padding: 8px;
+        width: 2rem;
       }
     }
   }
